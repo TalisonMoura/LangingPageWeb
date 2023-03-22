@@ -144,7 +144,7 @@ a {
     height: 6.5rem;
 }
 
-.intro-content{
+.inicial-content{
     position: relative;
     top: -8rem;
     display: grid;
@@ -153,27 +153,67 @@ a {
     height: 100vh;
 }
 
-.intro-text-content, .intro-img {
+.inicial-text-content, .inicial-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
 
-.intro-img img {
+.inicial-img img {
     max-width: 100%;
     height: auto;
 }
 
-.top3-content {
+.intro-content {
     max-width: 64rem;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     height: 100vh;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
-.top3-content p {
+.intro-content p {
     line-height: 1.5;
+}
+
+.top3-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+}
+
+.top3-main-heading {
+    margin-bottom: 1rem;
+}
+
+.top3-description {
+    padding-bottom: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: reapet(3, 1fr);
+    gap: var(--gap);
+    counter-reset: gridCounter;
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+.grid h3::before {
+    counter-increment: gridCounter;
+    content: counter(gridCounter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -3rem;
+    left: -2rem;
+    transform: rotate(5deg)
 }
