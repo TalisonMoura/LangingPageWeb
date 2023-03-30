@@ -15,12 +15,17 @@
 </head>
 
 <body>
+
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close-menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1><a href="#">Logo</a></h1>
+            <h1 onclick="getElementById('close-menu').checked = false;">
+                <a href="#inicial">Logo</a>
+            </h1>
 
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#inicial">Inicio</a></li>
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#top3">Top 3</a></li>
@@ -179,11 +184,13 @@
                     <legend>Contact me</legend>
                     <div class="form-group">
                         <label for="fisrt-name">First Name</label>
-                        <input class="radius-input" type="text" name="fisrt-name" id="fisrt-name" placeholder="Your name">
+                        <input class="radius-input" type="text" name="fisrt-name" id="fisrt-name"
+                            placeholder="Your name">
                     </div>
                     <div class="form-group">
                         <label for="last-name">Last Name</label>
-                        <input class="radius-input" type="text" name="last-name" id="last-name" placeholder="Your last name">
+                        <input class="radius-input" type="text" name="last-name" id="last-name"
+                            placeholder="Your last name">
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
@@ -191,7 +198,8 @@
                     </div>
                     <div class="form-group full-width">
                         <label for="message">Message</label>
-                        <textarea class="radius-input" name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                        <textarea class="radius-input" name="message" id="message" cols="30" rows="10"
+                            placeholder="Your message"></textarea>
                     </div>
                     <div class="form-group full-width">
                         <button class="radius-input" type="submit">Send message</button>
@@ -200,10 +208,12 @@
             </div>
         </div>
     </section>
-    
+
     <footer id="footer" class="white-bg  footer">
-        <p><a href="https://www.linkedin.com/in/talison-moura-71859721b/" target="_blank">Feito com <span class="heart">♥</span> por Talison</a></p>
+        <p><a href="https://www.linkedin.com/in/talison-moura-71859721b/" target="_blank">Feito com <span
+                    class="heart">♥</span> por Talison</a></p>
     </footer>
+    <a class="back-to-top" href="#">➤</a>
 </body>
 
 </html>
